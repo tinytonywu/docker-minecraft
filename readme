@@ -1,0 +1,17 @@
+This folder is used to practice Dockerfile 
+I use Ubuntu OS & install Java 8 to play Minecraft server 1.13 version.
+
+Then use command to create your own image:
+sudo docker build -t tonywu/mc1.13:1 .
+
+
+Start this image ,use command:
+sudo docker run -d -p 25565:25565 --name mc1.13 tonywu/mc1.13:1
+
+
+
+Also,you can mount your host volume on docker,
+command:
+sudo docker run -d -p 25565:25565 -v /home/tony/docker-test:/data --name mc1.13 tonywu/mc1.13:1
+
+
